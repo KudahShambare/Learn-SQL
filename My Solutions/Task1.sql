@@ -11,10 +11,16 @@ After successfully creating the table copy the code from [data.sql](data.sql) in
 
 create table songs (
 	id int auto_increment,
-	name text(256) not null,
+	name text not null,
 	length float(1)  not null,
 	album_id int not null ,
 	primary key (id),
-	foreign key (album_id)
+	foreign key (album_id) references albums(id)
+
 
 )
+
+
+ /*Left not null*/
+
+ Correct Solution
